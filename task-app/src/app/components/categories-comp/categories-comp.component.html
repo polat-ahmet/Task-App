@@ -1,0 +1,25 @@
+<app-category-add></app-category-add>
+<div class="container">
+  <div class="row" style="margin-top: 20px;">
+    <div class="col-sm">
+      <div class="list-group">
+        <div *ngFor="let category of categories">
+          <div>
+            <a routerLink="/categorydetail/{{category.id}}" routerLinkActive="active" class="list-group-item list-group-item-action active mt-2">{{category.name}}</a>     
+           </div>
+        </div>
+      </div>      
+    </div>
+    <div class="col-sm">
+      <div *ngFor="let category of categories">
+        <!-- <button (click)="deleteCategory(category.id)" style="width: 100px; height: 42px;" type="button" class="btn btn-danger mt-2">Delete</button>   -->
+        <button mat-mini-fab color="warn" (click)="deleteCategory(category.id)"
+          style="height: 42px; margin-top: 5px;" aria-label="Example icon button with a delete icon">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+  

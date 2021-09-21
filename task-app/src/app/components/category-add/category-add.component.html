@@ -1,0 +1,13 @@
+
+<div style="margin-left: 250px;" class="col-md-8">
+
+<form [formGroup]="categoryAddForm" (ngSubmit)="add()">
+  <div class="form-group mt-3">
+    <label for="add_category">Add Category</label>
+    <input type="text" formControlName="name" class="form-control" 
+      id="addCategoryName"  placeholder="Add Category">
+    <!-- <div class="alert alert-danger" *ngIf="categoryAddForm.get('name').hasError('required') && categoryAddForm.get('name').dirty">Category name is required</div> -->
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="categoryAddForm.invalid">Submit</button>
+</form>
+</div>

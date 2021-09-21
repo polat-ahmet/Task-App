@@ -1,0 +1,23 @@
+
+<div class="container">
+  <div class="row">
+    <div *ngFor="let task of tasks" class="col-md-4">
+      
+      <div class="card shadow-sm mt-3 pt-2">
+        <div class="card-body">
+          <h2>{{task.header}} </h2>
+          <p class="card-text">{{task.description}}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" routerLink="/taskdetail/{{task.id}}" routerLinkActive="active" class="btn btn-sm btn-outline-secondary">View</button>
+              <button type="button" (click)="deleteTask(task.id)" class="btn btn-sm btn-outline-danger">Delete</button>
+            </div>
+            <small class="text-muted"></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <app-task-list></app-task-list> -->
